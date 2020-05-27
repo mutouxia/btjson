@@ -16,7 +16,6 @@ var heiBai = {
                 e.data.bt?heiBai.setBt(e.data.bt):"";
                 dmapi=e.data.damapi?e.data.damapi:dmapi;
                 dmrule=e.data.dmly?e.data.dmly:dmrule;
-                right=e.data.right?e.data.right:right;
 
             }
         });
@@ -55,7 +54,7 @@ var heiBai = {
     post_r:function (a,b,c,d,type) {
         $.ajax({
             type: "get",
-            url: dmapi+'?ac=report&cid='+d+'&user='+a+'&type='+type+'&title='+b+'&text='+c,
+            url: dmapi+'?ac=report&cid='+d+'&user='+a+'&type='+type+'&title='+b+'&text='+c+'&reffer='+window.location.href,
             cache: false,
             dataType: 'json',
             beforeSend: function() {
